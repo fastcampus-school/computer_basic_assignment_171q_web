@@ -15,3 +15,79 @@ Git, Mecurial, Bazaar, Darcs 같은 DVCS에서의 클라이언트는 단순히 �
 게다가 대부분의 DVCS 환경에서는 리모트 저장소가 존재한다. 리모트 저장소가 많을 수도 있다. 그래서 사람들은 동시에 다양한 그룹과 다양한 방법으로 협업할 수 있다. 계층 모델 같은 중앙집중식 시스템으로는 할 수 없는 Workflow를 다양하게 사용할 수 있다.
 
 # git 명령어
+## init
+현재 디렉토리를 git 버전 관리 디렉토리로 설정
+
+```shell
+$ git init
+```
+
+## status
+레포지토리의 상태를 조회한다.
+
+```shell
+$ git status
+```
+
+## add
+working directory 파일을 staging area에 추가
+```shell
+$ git add index.html
+```
+
+## commit
+staging area의 파일들을 repository 영역으로 저장
+```shell
+$ git commit
+$ git commit -m "Add about.html"
+
+# add 없이 commit
+$ git commit -a -m "Add html tag"
+```
+
+## log
+repository의 commit 이력을 조회
+
+``` shell
+$ git log
+$ git log --oneline
+$ git log --oneline --decorate --graph --all
+# 특정 파일의 로그 조회
+$ git log -- index.html
+```
+
+## diff
+현재 브랜치의 마지막 커밋과 working directory를 비교
+```shell
+$ git diff
+$ git diff -- index.html
+```
+
+## branch
+브랜치를 생성, 수정, 삭제
+```shell
+# develop 브랜치 생성
+$ git branch develop
+
+# 브랜치 목록 조회
+$ git branch
+
+# develop 브랜치로 변경
+$ git checkout develop
+
+# develop 브랜치 삭제
+$ git branch -d develop
+
+# develop 브랜치를 test 브랜치로 변경
+$ git branch -m develop test
+
+# 원격 브랜치까지 조회
+$ git branch -a
+```
+
+## Checkout
+두 개의 브랜치를 병합하거나 특정 커밋을 현재 브랜치에 병합
+```shell
+# develop 브랜치를 master 브랜치에 병합
+$ git merge develop
+```
