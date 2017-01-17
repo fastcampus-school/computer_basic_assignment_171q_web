@@ -144,13 +144,3 @@ esc shift ; wq 하면 저장
 |  git stash apply  |   스택에 저장된 최신의 stash를 적용합니다 |  
 |   git stash apply stash이름(ex.stash@{0}) | 스택에 저장된 stash중 이름이 같은 stash를 적용합니다 |  
 | git stash apply –index    |  Stage 상태로 스택에 저장된 stash를 Stage 상태까지 복원합니다  | 
-
-
-
-
-
-
-
-
-
-
