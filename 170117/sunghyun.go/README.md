@@ -132,7 +132,7 @@ esc shift ; wq 하면 저장
 * git log -p   
 변경된 사항을 볼수있다
 
-* git push 
+* git push    
 푸쉬를해서 리모트 레포지터리 간다
 
 * git reset --hard 커밋번호    
@@ -156,6 +156,27 @@ git init 하자말자 쓸것
 
 * git merage 커밋변수    
  커밋변수 지점으로 합병을 시켜줌
+ 
+* git diff    
+ 파일 변경사항들을 보여준다 
+
+* git diff [파일] :   
+ 해당 파일의 변경사항을 보여준다
+
+* git stash :   
+ 변경된 내역들을 스택에 만들고 워킹디렉토리는 깨끗하게 비운다.
+
+* git stash list :  
+ 스택에 저장된 내역들을 확인할 수 있다.
+
+* git stash apply :   
+ 스택에 저장된 최신의 stash를 적용한다.
+
+* git stash apply stash이름(ex.stash@{0}) :   
+ 스택에 저장된 stash중 이름이 같은 stash를 적용한다.
+
+* git stash apply –index :   
+ Stage 상태로 스택에 저장된 stash를 Stage 상태까지 복원한다
 
 
 
