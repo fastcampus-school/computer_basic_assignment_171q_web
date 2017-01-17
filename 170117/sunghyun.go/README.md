@@ -63,35 +63,37 @@
 
 
 ##기본 명령어
-1.pwd   
-현재위치 확인
-2.cd ..   
-상위폴더로 간다   
-3.cd 하위폴더이름   
-하위폴더로 간다.   
-4.mkdir  
-폴더생성  
-5.rm -rf 폴더이름  
-폴더삭제.   
-6.rm 파일이름  
-파일삭제
+
+<br>
+
+|명령어|내용|
+|----|---|
+|pwd |현재위치를 확인한다|
+|cd ..|상위폴더로 간다                            |  
+|cd 하위폴더이름     |하위폴더로 갑니다               |
+|mkdir     |폴더를생 생성합니다                    |
+|rm -rf 폴더이름    |폴더를 삭제합니다              |
+|rm 파일이름|파일을 삭제합니다                      |
+
+<br>
+
 
 ##git 명령어
-1.git init   
-로컬 레포터지터리 생성      
-2.git status     
-깃 상태를 보여줌 브랜치나 이것저것  
-3. git add 파일이름     
-파일을 스테이지 에어리어로 올림.  
-4.git commit 파일이름  
-파일을 로컬 레포터지터리로 옮김  
-5.git remote origin 기트허브주소
-6.git push origin master  
-화면
-
+|명령어|내용|
+|----|---|
+|git init|로컬 레포지터리를 생성합니다|
+|git status|깃 상태를 보여줍니다|
+|git add 파일이름|파일을 Stage Area로 보냅니다|
+|git commit 파일이름|파일을 ㅣLocal Repository로 보냅니다|
+|git remote origin 기트허브주소|기트허브의 주소로 Remote Repository연결합니다 |
+|git push origin master|마스터 브랜치로 파일은 보냅니다.|
+ 
+ <br>
+ 
+ 
 ```
 첫 번째 인덱스 html 파일을 생성하였습니다.
-git 명렁어 실습 중입니당.
+git 명렁어 실습 중입니다.
 # Please enter the commit message for your changes. Lines starting
 # with '#' will be ignored, and an empty message aborts the commit.
 # On branch master
@@ -116,69 +118,29 @@ git 명렁어 실습 중입니당.
 esc shift ; wq 하면 저장
 ```
 
-5.git commit -m "문장"   
-커밋에 문장 쓸떄    
-6.git log    
-깃 히스토리를 보는것    
-7.git add -A    
-다 넣는거임 스테이지 에어리어로   
-8.git reset HEAD 파일명.   
-스테이지 에어리에 있는건 끌어내리는 것     
-9.git commit -a -m "한 번에 컷민하기 내용 추가 "     
-한번에 커밋해서 로컬 레포지터리로 올려버린다    
-10.git clone 기트허브주소     
-주소에 있는 기트허브를 내 워킹 디렉터리로 들어오게한다   
+<br>
 
-* git log -p   
-변경된 사항을 볼수있다
-
-* git push    
-푸쉬를해서 리모트 레포지터리 간다
-
-* git reset --hard 커밋번호    
-커밋번호까지 리셋을 시켜줘버린다
-
-* git reset --hard ORIG_HEAD     
-리셋 했던 것을 다시 마지막 커밋상태로 돌려준당
-
-* git revert --hard 커밋번호    
-커밋번호로 리벌트를 한다    
-
-* vi .gitignore    
-이그노어에 넣어두는 애들은 다 무시해버린다    
-git init 하자말자 쓸것
-
-* git branch 브랜치명    
-브랜치를 만들수 있다.
-
-* git checkout 브린채명    
-브랜치 체크아웃을 옮겨주는 변수
-
-* git merage 커밋변수    
- 커밋변수 지점으로 합병을 시켜줌
- 
-* git diff    
- 파일 변경사항들을 보여준다 
-
-* git diff [파일] :   
- 해당 파일의 변경사항을 보여준다
-
-* git stash :   
- 변경된 내역들을 스택에 만들고 워킹디렉토리는 깨끗하게 비운다.
-
-* git stash list :  
- 스택에 저장된 내역들을 확인할 수 있다.
-
-* git stash apply :   
- 스택에 저장된 최신의 stash를 적용한다.
-
-* git stash apply stash이름(ex.stash@{0}) :   
- 스택에 저장된 stash중 이름이 같은 stash를 적용한다.
-
-* git stash apply –index :   
- Stage 상태로 스택에 저장된 stash를 Stage 상태까지 복원한다
-
-
-
-
-
+|명령어|내용|
+|----|---|
+|git commit -m "문장"|커밋의 내용을 미리 넣어줍니다|
+|git log|깃 히스토리를 보는것입니다|
+|git add -A|Stage Area 모든 정보를 다 보냅니다|
+| git reset HEAD 파일명.| 스테이지 에어리에 있는 파일을 Working Directory 돌려 보냅니다|
+|git commit -a -m "한 번에 컷민하기 내용 추가 "|한번에 커밋해서 Local Repository로 올려버립니다|
+|git clone 기트허브주소|주소에 있는 기트허브를 나의 Working Directory로 들어오게 합니다|
+|git log -p |변경된 사항을 볼수있습니다.|
+|git push|push를해서 Remote Repository 갑니다.
+|git reset --hard 커밋번호|커밋번호까지 리셋을 시킵니다.|
+|git reset --hard ORIG_HEAD |reset 했던 것을 다시 마지막 커밋상태로 돌려줍니다.|
+| git revert --hard 커밋번호| 커밋번호로 revert를 합니다|
+| vi .gitignore| 이그노어에 넣어두는 애들은 다 무시해버린다  **git init 하자말자 쓸것** |
+| git branch 브랜치명 | 브랜치를 만들수 있습니다.  |
+| git checkout 브린채명 |브랜치 체크아웃을 옮겨주는 변수입니다 |
+| git merage 커밋변수     |커밋변수 지점으로 합병을 시켜줍니다   |
+| git diff   |파일 변경사항들을 보여줍니다   |
+| git diff 파일    | 해당 파일의 변경사항을 보여줍니다  |  
+|  git stash | 변경된 내역들을 스택에 만들고 워킹디렉토리는 깨끗하게 비웁니다  |  
+| git stash list   |  스택에 저장된 내역들을 확인할 수 있습니다  |  
+|  git stash apply  |   스택에 저장된 최신의 stash를 적용합니다 |  
+|   git stash apply stash이름(ex.stash@{0}) | 스택에 저장된 stash중 이름이 같은 stash를 적용합니다 |  
+| git stash apply –index    |  Stage 상태로 스택에 저장된 stash를 Stage 상태까지 복원합니다  | 
