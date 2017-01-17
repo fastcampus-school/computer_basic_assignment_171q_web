@@ -185,18 +185,22 @@ nothing added to commit but untracked files present (use "git add" to track)
 ```
 README 파일은 Untracked files 부분에 속해 있는데 이것은 README 파일이 Untracked 상태라는 것을 말한다. Git은 Untracked 파일을 아직 스냅샷(커밋)에 넣어지지 않은 파일이라고 본다. 파일이 Tracked 상태가 되기 전까지는 Git은 절대 그 파일을 커밋하지 않는다. 그래서 일하면서 생성하는 바이너리 파일 같은 것을 커밋하는 실수는 하지 않게 된다. README 파일을 추가해서 직접 Tracked 상태로 만들어 보자.
 
-파일을 새로 추적하기
+####파일을 새로 추적하기
+
 git add 명령으로 파일을 새로 추적할 수 있다. 아래 명령을 실행하면 Git은 README 파일을 추적한다:
 
 $ git add README
 git status 명령을 다시 실행하면 README 파일이 Tracked 상태이면서 Staged 상태라는 것을 확인할 수 있다:
 
+```
 $ git status
 On branch master
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
         new file:   README
+```
+ 
 'Changes to be committed' 에 들어 있는 파일은 Staged 상태라는 것을 의미한다. 커밋하면 git add를 실행한 시점의 파일이 커밋되어 저장소 히스토리에 남는다. 앞에서 git init 명령을 실행했을 때, 그 다음 git add (files) 명령을 실행했던 걸 기억할 것이다. 이것은 작업 디렉토리에 있는 파일들을 추적하기 시작하게 하였다. git add 명령은 파일 또는 디렉토리의 경로명을 아규먼트로 받는다; 만일 디렉토리를 아규먼트로 줄 경우, 그 디렉토리 아래에 있는 모든 파일들을 재귀적으로 추가한다.
 
 ####Modified 상태의 파일을 Stage하기
@@ -214,7 +218,8 @@ Changes not staged for commit:
   (use "git checkout -- <file>..." to discard changes in working directory)
 
         modified:   benchmarks.rb
-        ```
+```
+        
 이 benchmarks.rb 파일은 Changes not staged for commit에 있다. 이것은 수정한 파일이 Tracked 상태이지만 아직 Staged 상태는 아니라는 것이다. Staged 상태로 만들려면 git add 명령을 실행해야 한다. git add는 파일을 새로 추적할 때도 사용하고 수정한 파일을 Staged 상태로 만들 때도 사용한다. git add를 실행하여 benchmarks.rb 파일을 Staged 상태로 만들고 git status 명령으로 결과를 확인해보자:
 ```
 $ git add benchmarks.rb
@@ -225,9 +230,11 @@ Changes to be committed:
 
         new file:   README
         modified:   benchmarks.rb
-        ```
+```
+        
 두 파일 모두 Staged 상태이므로 다음 커밋에 포함된다. 하지만, 아직 더 수정해야 한다는 것을 알게 되어 바로 커밋하지 못하는 상황이 되었다고 하자. 이 상황에서 benchmark.rb 파일을 열고 수정한다. 아마 당신은 커밋할 준비가 다 됐다고 생각할 테지만, Git은 그렇지 않다. git status 명령으로 파일의 상태를 다시 확인해보자:
 
+```
 $ vim benchmarks.rb
 $ git status
 On branch master
@@ -241,7 +248,10 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
 
         modified:   benchmarks.rb
+```
+        
 헉! benchmarks.rb가 Staged 상태이면서 동시에 Unstaged 상태로 나온다. 어떻게 이런 일이 가능할까? git add 명령을 실행하면 Git은 파일을 바로 Staged 상태로 만든다. 지금 이 시점에서 커밋을 하면 git commit 명령을 실행하는 시점의 버전이 커밋되는 것이 아니라 마지막으로 git add 명령을 실행했을 때의 버전이 커밋된다. 그러니까 git add 명령을 실행한 후에 또 파일을 수정하면 git add 명령을 다시 실행해서 최신 버전을 Staged 상태로 만들어야 한다:
+
 ```
 $ git add benchmarks.rb
 $ git status
@@ -251,7 +261,7 @@ Changes to be committed:
 
         new file:   README
         modified:   benchmarks.rb
-  
+```  
 
 ####파일 무시하기
 어떤 파일은 Git이 자동으로 추가하거나 Untracked 파일이라고 보여줄 필요가 없다. 보통 로그 파일이나 빌드 시스템이 자동으로 생성한 파일이 그렇다. 그런 파일을 무시하려면 .gitignore 파일을 만들고 그 안에 무시할 파일 패턴을 적는다. 아래는 .gitignore 파일의 예이다:
@@ -270,7 +280,6 @@ $ cat .gitignore
 Glob 패턴은 정규표현식을 단순하게 만든 것으로 생각하면 되고 보통 쉘에서 많이 사용한다. 애스터리스크(*)는 문자가 하나도 없거나 하나 이상을 의미하고, [abc]는 중괄호 안에 있는 문자 중 하나를 의미한다(그러니까 이 경우에는 a, b, c). 물음표(?)는 문자 하나를 말하고, [0-9]처럼 중괄호 안의 캐릭터 사이에 하이픈(-)을 사용하면 그 캐릭터 사이에 있는 문자 하나를 말한다.
 
 다음은 .gitignore 파일의 예이다:
-```
 
 ```
 # a comment - 이 줄은 무시한다.
@@ -295,6 +304,7 @@ Staged와 Unstaged 상태의 변경 내용을 보기
 
 README 파일을 수정해서 Staged 상태로 만들고 benchmarks.rb 파일은 그냥 수정만 해둔다. 이 상태에서 git status 명령을 실행하면 아래와 같은 메시지를 볼 수 있다:
 
+```
 $ git status
 On branch master
 Changes to be committed:
@@ -307,6 +317,8 @@ Changes not staged for commit:
   (use "git checkout -- <file>..." to discard changes in working directory)
 
         modified:   benchmarks.rb
+```
+
 git diff 명령을 실행하면 수정했지만 아직 staged 상태가 아닌 파일을 비교해 볼 수 있다:
 
 $ git diff
@@ -359,7 +371,7 @@ Changes not staged for commit:
   (use "git checkout -- <file>..." to discard changes in working directory)
 
         modified:   benchmarks.rb
-        ```
+```
 git diff 명령으로 Unstaged 상태인 변경 부분을 확인해 볼 수 있다:
 
 $ git diff
@@ -390,7 +402,9 @@ index 3cb747f..e445e28 100644
         run_code(x, 'commits 2') do
           log = git.commits('master', 15)
           log.size
-변경사항 커밋하기
+
+####변경사항 커밋하기
+
 수정한 것을 커밋하기 위해 Staging Area에 파일을 정리했다. Unstaged 상태의 파일은 커밋되지 않는다는 것을 기억해야 한다. Git은 생성하거나 수정하고 나서 git add 명령으로 추가하지 않은 파일은 커밋하지 않는다. 그 파일은 여전히 Modified 상태로 남아 있다. 커밋하기 전에 git status 명령으로 모든 것이 Staged 상태인지 확인할 수 있다. 그리고 git commit을 실행하여 커밋한다:
 
 $ git commit
@@ -398,7 +412,6 @@ Git 설정에 지정된 편집기가 실행되고, 아래와 같은 텍스트가
 
 편집기는 아래와 같은 내용을 표시한다(아래 예제는 Vim 편집기):
 
-```
 ```
 # Please enter the commit message for your changes. Lines starting
 # with '#' will be ignored, and an empty message aborts the commit.
@@ -412,7 +425,7 @@ Git 설정에 지정된 편집기가 실행되고, 아래와 같은 텍스트가
 ~
 ".git/COMMIT_EDITMSG" 10L, 283C
 ```
-```
+
 자동으로 생성되는 커밋 메시지의 첫 줄은 비어 있고 둘째 줄부터 git status 명령의 결과가 채워진다. 커밋한 내용을 쉽게 기억할 수 있도록 이 메시지를 포함할 수도 있고 메시지를 전부 지우고 새로 작성할 수 있다(수정한 내용을 좀 더 구체적으로 남겨 둘 수 있다. git commit에 -v 옵션을 추가하면 편집기에 diff 메시지도 추가된다).
 
 메시지를 인라인으로 첨부할 수도 있다. commit 명령을 실행할 때 아래와 같이 -m 옵션을 사용한다:
@@ -421,13 +434,15 @@ $ git commit -m "Story 182: Fix benchmarks for speed"
 [master 463dc4f] Story 182: Fix benchmarks for speed
  2 files changed, 3 insertions(+)
  create mode 100644 README
- ```
+```
+
 commit 명령은 몇 가지 정보를 출력하는데 위 예제는 master 브랜치에 커밋했고 체크섬은 463dc4f이라고 알려준다. 그리고 수정한 파일이 몇 개이고 삭제됐거나 추가된 줄이 몇 줄인지 알려준다.
 
 Git은 Staging Area에 속한 스냅샷을 커밋한다는 것을 기억해야 한다. 수정은 했지만, 아직 Staging Area에 넣지 않은 것은 다음에 커밋할 수 있다. 커밋할 때마다 프로젝트의 스냅샷을 기록하기 때문에 나중에 스냅샷끼리 비교하거나 예전 스냅샷으로 되돌릴 수 있다.
 
 Staging Area 생략하기
 Staging Area는 커밋할 파일을 정리한다는 점에서 매우 유용하지만 복잡하기만 하고 필요하지 않은 때도 있다. 아주 쉽게 Staging Area를 생략할 수 있다. git commit 명령을 실행할 때 -a 옵션을 추가하면 Git은 Tracked 상태의 파일을 자동으로 Staging Area에 넣는다. 그래서 git add 명령을 실행하는 수고를 덜 수 있다:
+
 ```
 $ git status
 On branch master
