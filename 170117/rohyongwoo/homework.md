@@ -23,7 +23,7 @@
 
 ####3. 중앙집중식 버전관리 시스템(CVCS)
 
-![alt CVCS](CVCS.png)
+![alt CVCS](images/CVCS.png)
 
   * **하나의 서버에 여러 클라이언트**들의 파일을 저장하여 관리하는 형태로 다수의 개발자들의 협업과 관리를 위해 탄생
 
@@ -33,7 +33,7 @@
 
 ####4. 분산 버전 관리 시스템(DVCS)
 
-![alt DVCS](DVCS.png)
+![alt DVCS](images/DVCS.png)
 
   * **로컬 저장소와 원격 저장소 모두**를 가지는 버전관리시스템
 
