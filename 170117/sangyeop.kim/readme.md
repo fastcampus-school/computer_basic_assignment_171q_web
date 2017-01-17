@@ -28,3 +28,14 @@
 > `pwd` : 현재 위치하고 있는 경로 확인  
 > `git init` : local repository 생성  
 > `git status` : git 상태 확인  
+> `git add <파일 이름>` : git stage 에 추가  
+> `git add -A` : 수정되거나 추가된 파일 전부 stage 에 추가  
+> `git commit` : commit 추가  
+> `git -m "내용"` : commit 추가    
+> `git log` : history 확인  
+> `git log -p` : 수정된 내용 포함한 history
+> `git clone <repository url 주소>` : 서버에 저장된 파일 저장  
+> `git push` : remote repository 로 파일 추가  
+> `git pull` : remote repository 에서 파일들 받아옴  
+  
+ 
