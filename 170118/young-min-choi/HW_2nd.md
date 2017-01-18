@@ -48,7 +48,7 @@ DDR - 컴퓨터의 clock signal을 up and down 을 모두 활용하여 보내는
 
 DIMM - Dual Inline Memory Module의 준말로 Inline이  RIMM에 비해 두배 많으므로 두배의 bus를 확보할 수 있다. 
 
-**결론적으로, RAM의 속도는 clock signal과 bus의 bandwidth를 늘리는 것 등 데이터를 더 많이 효율적으로 보내는 것에 의해 가능해졌다고 볼 수 있다. **
+**결론적으로, RAM의 속도는 clock signal과 bus의 bandwidth를 늘리는 것 등 데이터를 더 많이 효율적으로 보내는 것에 의해 가능해졌다고 볼 수 있다.**
 
 ---
 
