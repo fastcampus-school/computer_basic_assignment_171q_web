@@ -91,7 +91,7 @@ DIMM - Dual Inline Memory Module의 준말로 Inline이  RIMM에 비해 두배 �
 ![img](http://www.edgefxkits.com/blog/wp-content/uploads/Differences-between-Von-Neuman-Architecture-and-Harvard-Architecture.jpg)
 
 cache는 이러한 기본적인 두 구조의 한계를 극복하는데 사용된다. 
-하버드에서는 메모리와 연산을 위한 각기 다른 캐쉬를 가지는 것이 좋은데, 이를 통해 양쪽의 bus가 동시에 쓰이는 것을 가능하게 하며 이것이 하버드 구조가 기본적으로 지향하는 방향이기 때문이다. 
+하버드에서는 메모리와 연산을 위한 각기 다른 캐쉬를 가지는 것이 좋은데, 이를 통해 양쪽의 bus가 동시에 쓰이는 것을 가능하게 하며 이것이 하버드 구조가 기본적으로 지향하는 방향이기 때문이다. **즉 다시 말해, shared cache를 쓰는 것은 하버드 구조에서는 바람직 하지 않은데 그 이유는 두 bus를 동시에 feeding 하는 것이 힘들어 지기 때문이다.** 하버드 구조는 주로 high-performance system에서 자주 활용되고 이런 환경에서는 cache가 쓰이는 것이 매우 효율적이다. 
 
 ---
 ####3. 한글을 표현할 수 있는 문자 인코딩 방식에는 무엇이 있을까? 각각의 장단점도 조사해 보세요.
