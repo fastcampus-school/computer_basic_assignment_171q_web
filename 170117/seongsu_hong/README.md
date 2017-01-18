@@ -38,6 +38,8 @@
 : 버에 문제가 생겨도 어느 클라이언트든 복제된 저장소를 다시 서버로 복사하면 서버가 복구된다. 체크아웃(checkout)을 할 때마다 전체 백업이 일어난다.
 ![](/home/hong/바탕화면/server.png) 
 <hr>
+
+
 #2. git 명령어
  * git init : 현재 디렉토리에 .git폴더 생성
  * git status : 현재 디렉토리 상태 확인
@@ -65,4 +67,3 @@
  * git checkout -- 파일이름 : 변경 내용을 변경 전 상태로 되돌림
  * gitk : git의 내장 GUI
  * git config color.ui true : git output을 컬러로 출력하기
- 
