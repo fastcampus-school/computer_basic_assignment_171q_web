@@ -1,3 +1,6 @@
+**Comment: ctr+c/ctr+v는 지양합시다~**
+
+
 #1. 버전관리
 ###1-1. 버전관리란 무엇인가?
 : 버전 관리(version control, revision control), 소스 관리(source control), 소스 코드 관리(source code management, SCM)란 동일한 정보에 대한 여러 버전을 관리하는 것을 말한다.
