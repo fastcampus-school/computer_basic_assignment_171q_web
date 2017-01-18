@@ -1,3 +1,6 @@
+**Comment: ctr+c/ctr+v는 지양합시다~**
+
+
 #GIT 명령어 정리
 
 

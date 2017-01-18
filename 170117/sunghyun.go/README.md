@@ -71,7 +71,7 @@
 |pwd |현재위치를 확인한다|
 |cd ..|상위폴더로 간다                            |  
 |cd 하위폴더이름     |하위폴더로 갑니다               |
-|mkdir     |폴더를생 생성합니다                    |
+|mkdir     |폴더를**생** 생성합니다                    |
 |rm -rf 폴더이름    |폴더를 삭제합니다              |
 |rm 파일이름|파일을 삭제합니다                      |
 
@@ -85,8 +85,8 @@
 |git status|깃 상태를 보여줍니다|
 |git add 파일이름|파일을 Stage Area로 보냅니다|
 |git commit 파일이름|파일을 ㅣLocal Repository로 보냅니다|
-|git remote origin 기트허브주소|기트허브의 주소로 Remote Repository연결합니다 |
-|git push origin master|마스터 브랜치로 파일은 보냅니다.|
+|git remote origin 기트허브주소|기트허브의 주소로 Remote Repository연결합니다**과연 그럴까요?** |
+|git push origin master|마스터 브랜치로 파일**은** 보냅니다.|
  
  <br>
  
