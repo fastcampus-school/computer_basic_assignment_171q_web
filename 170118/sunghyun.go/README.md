@@ -12,6 +12,7 @@
 
 ###1.폰 노이만 구조의 한계
  1-1폰 노이만 구조
+ 
  ![noiman](https://cdn-learn.adafruit.com/assets/assets/000/010/259/original/learn_arduino_Von_Neumann.gif?1448055807)
  
  * cpu와 메모리의 길이 일방통행이라 명령을 가져오는 작업과 데이터를 연산이 동시에 발생할 수 없기 때문에 성능이 하버드 구조 보다 떨어집니다. 이를 폰 노이만 병목현상이라고 합니다.
