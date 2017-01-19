@@ -93,6 +93,16 @@ DIMM - Dual Inline Memory Module의 준말로 Inline이  RIMM에 비해 두배 �
 cache는 이러한 기본적인 두 구조의 한계를 극복하는데 사용된다. 
 하버드에서는 메모리와 연산을 위한 각기 다른 캐쉬를 가지는 것이 좋은데, 이를 통해 양쪽의 bus가 동시에 쓰이는 것을 가능하게 하며 이것이 하버드 구조가 기본적으로 지향하는 방향이기 때문이다. **즉 다시 말해, shared cache를 쓰는 것은 하버드 구조에서는 바람직 하지 않은데 그 이유는 두 bus를 동시에 feeding 하는 것이 힘들어 지기 때문이다.** 하버드 구조는 주로 high-performance system에서 자주 활용되고 이런 환경에서는 cache가 쓰이는 것이 매우 효율적이다. 
 
+반대로 폰노이만 구조를 개량화 하는 방법에는 위키 검색결과 다음과 같은 4가지 방법이 통상적으로 이용되고 있다. 
+
+- Providing a cache between the CPU and the main memory
+- providing separate caches or separate access paths for data and instructions (the so-called Modified Harvard architecture)
+- using branch predictor algorithms and logic
+- providing a limited CPU stack or other on-chip scratchpad memory to reduce memory access
+
+**내가 느낀 감상은 폰노이만과 하버드 구조의 이분법적인 구분은 현대의 컴퓨터에는 명확히 들어맞지 않는 다는 것이다. 물론 하버드 구조의 경우 high-performance, specific-purpose system에 더 많이 쓰이는 경향이 있는 것 같다. 캐쉬와 기타 추가적인 장치를 통해 각 구조는 한계를 극복하고 있다.**
+
+
 ---
 ####3. 한글을 표현할 수 있는 문자 인코딩 방식에는 무엇이 있을까? 각각의 장단점도 조사해 보세요.
 
@@ -103,6 +113,7 @@ cache는 이러한 기본적인 두 구조의 한계를 극복하는데 사용�
 |모든 문자에 관해 완성된 형태를 저장한다.|각 자음 모음을 저장하고 이를 조합|
 |차지하는 데이터가 많다|차지하는 데이터가 적다|
 
+마이크로소프트가 완성형을 택한 이후 조합형은 많이 쓰이지 않고 있다고 한다. 
 
 - 한글 조합형
 
