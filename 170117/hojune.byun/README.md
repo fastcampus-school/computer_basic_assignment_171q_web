@@ -21,9 +21,12 @@
 분산 버전 관리 시스템에서는 클라이언트가 파일의 마지막 스냅샷을 가져오는 것이 아니라 저장소 자체를 복제하게 된다. 서버에 문제가 생겨도, 클라이언트가 복제한 복제물로 서버를 복원할 수 있다. 대표적인 예로는 Git, Mercurial등이 분산 버전 관리 시스템에 속한다.  
    
 #**git 명령어(command) 정리하기**
+하기 김준모님께서 git 정리하신 내용 참조하세요. 정리가 훨씬 더 자~알 되어있습니다.   
+https://github.com/fastcampus-school/computer_basic_assignment_171q_web/tree/master/170117/joonmo.kim  
+
 1.**git init** : git 초기화. working directory에 .git 폴더가 생성됨. local repo 생성.  
->		**git init**을 한 번 하면 **.gitignore**를 작성해 주어야 편하다.  
-	  *gitignore.io*에서 설정 가능.  
+>		git init을 한 번 하면 .gitignore를 작성해 주어야 편하다.  
+	  gitignore.io에서 설정 가능.  
 
 2.**git status** : working directory상태 확인. staging area에 올라간 파일들.  
 3. **git add 파일명** : working directory에서 staging area로 파일이 이동.  
