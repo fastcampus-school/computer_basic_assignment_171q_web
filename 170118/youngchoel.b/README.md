@@ -1,3 +1,6 @@
+###:clipboard: wow good~:thumbsup::thumbsup::thumbsup:
+
+
 #긁어오는 과제가 아닌 개념을 읽고 내가 이해한 바를 작성하는 과제!
 
 1. RAM은 어떤 단어들의 약자이며, 왜 RAM이라고 부르게 되었을까?

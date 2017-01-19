@@ -5,7 +5,7 @@
 #### 1. RAM은 어떤 단어들의 약자이며, 왜 RAM이라고 부르게 되었을까?
 * RAM: Random Access Memory
 - 유래:
-    램(RAM: Random Acess Memory)은 임의의 영역에 접근하여 읽고 쓰기가 가능한 주기억 장치로서, 어느 위치에 저장된 데이터든지 접근하는데 동일한 시간이 걸리는 메모리라는 의미로 Random Access라는 명칭이 주어진다.
+    램(RAM: Random Access Memory)은 임의의 영역에 접근하여 읽고 쓰기가 가능한 주기억 장치로서, 어느 위치에 저장된 데이터든지 접근하는데 동일한 시간이 걸리는 메모리라는 의미로 Random Access라는 명칭이 주어진다.
 <br>
 <br>
 

@@ -1,3 +1,6 @@
+###:clipboard: ctr+c/ctr+v는 지양합시다 :tired_face:
+
+
 RAM 은 어떤 단어들의 약자이며, RA이라고 부르게 되었을까?
 - RAM : Random Access Memory
 - 램의 필요성 : CPU의 속도에 비해서 HDD(보조기억장치)의 속도가 너무 느리기 때문

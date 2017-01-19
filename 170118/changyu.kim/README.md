@@ -1,3 +1,6 @@
+###:clipboard: ctr+c/ctr+v는 지양합시다. 자료의 출처도 밝혀주세요~ :tired_face:
+
+
 
 ##1. ram은 어떤 단어들의 약자이며, 왜 ram 이라고 부르게되었을까?
 
