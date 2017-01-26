@@ -14,7 +14,7 @@
   새로 탄생한 표준안이 바로 HTML5인 것이다.  
 
  Reference : <http://planistudy.tistory.com/entry/html5-%EA%B0%9C%EB%85%90%EC%9D%B4%ED%95%B41>  
- <http://ha0programming.tistory.com/15>
+            <http://ha0programming.tistory.com/15>
 
 # 국내외의 HTML5 적용현황
 - 구글에선 open architecture인 Google Gears를 포기하고 HTML5를 지원하여,  
